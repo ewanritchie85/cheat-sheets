@@ -1,412 +1,177 @@
-# Bash Cheat Sheet (Basic + Advanced)
+# Bash Cheat Sheet
 
 ## Basic Navigation
 
-**Print working directory**
-```bash
-pwd
-```
-
-**List files (long format)**
-```bash
-ls -l
-```
-
-**Change directory**
-```bash
-cd /path/to/directory
-```
-
-**Go up one directory**
-```bash
-cd ..
-```
-
-**Home directory**
-```bash
-cd ~
-```
-
----
+| Action                     | Command                           |
+|----------------------------|-----------------------------------|
+| Print working directory    | `pwd`                             |
+| List files (long format)   | `ls -l`                           |
+| Change directory           | `cd /path/to/directory`           |
+| Go up one directory        | `cd ..`                           |
+| Go to home directory       | `cd ~`                            |
 
 ## File Management
 
-**Copy a file**
-```bash
-cp source.txt destination.txt
-```
+| Action                              | Command                           |
+|-------------------------------------|-----------------------------------|
+| Copy a file                         | `cp source.txt destination.txt`   |
+| Copy a directory recursively        | `cp -r sourcedir targetdir`       |
+| Move or rename a file               | `mv oldname.txt newname.txt`      |
+| Remove a file                       | `rm file.txt`                     |
+| Remove a directory recursively      | `rm -r directory/`                |
+| Create a directory                  | `mkdir newfolder`                 |
+| Create an empty file                | `touch newfile.txt`               |
 
-**Copy a directory recursively**
-```bash
-cp -r sourcedir targetdir
-```
+## Viewing & Searching Files
 
-**Move or rename a file**
-```bash
-mv oldname.txt newname.txt
-```
-
-**Remove a file**
-```bash
-rm file.txt
-```
-
-**Remove a directory recursively**
-```bash
-rm -r directory/
-```
-
-**Create a directory**
-```bash
-mkdir newfolder
-```
-
-**Create an empty file**
-```bash
-touch newfile.txt
-```
-
----
-
-## Viewing and Searching Files
-
-**Show file contents**
-```bash
-cat file.txt
-```
-
-**Page through a file**
-```bash
-less file.txt
-```
-
-**Head (first 10 lines)**
-```bash
-head file.txt
-```
-
-**Tail (last 10 lines)**
-```bash
-tail file.txt
-```
-
-**Search in a file**
-```bash
-grep "search_term" file.txt
-```
-
-**Recursive search**
-```bash
-grep -r "search_term" /path/to/dir/
-```
-
----
+| Action                             | Command                                    |
+|------------------------------------|--------------------------------------------|
+| Show file contents                 | `cat file.txt`                             |
+| Page through a file                | `less file.txt`                            |
+| Show first 10 lines (head)         | `head file.txt`                            |
+| Show last 10 lines (tail)          | `tail file.txt`                            |
+| Search in a file                   | `grep "search_term" file.txt`              |
+| Recursive search                   | `grep -r "search_term" /path/to/dir/`      |
 
 ## Permissions
 
-**Change file permissions**
-```bash
-chmod 755 script.sh
-```
-
-**Change file owner**
-```bash
-sudo chown user:group file.txt
-```
-
----
+| Action                      | Command                          |
+|-----------------------------|----------------------------------|
+| Change file permissions     | `chmod 755 script.sh`            |
+| Change file owner           | `sudo chown user:group file.txt` |
 
 ## Useful Shortcuts
 
-**Command history**
-```bash
-history
-```
-
-**Run last command again**
-```bash
-!!
-```
-
-**Autocomplete command or filename**
-```
-[TAB]
-```
-
-**Cancel current command**
-```
-Ctrl+C
-```
-
-**Exit shell**
-```bash
-exit
-```
-
----
+| Action                     | Shortcut                  |
+|----------------------------|---------------------------|
+| Show command history       | `history`                |
+| Run last command again     | `!!`                     |
+| Autocomplete               | Press `TAB`              |
+| Cancel current command     | Press `Ctrl+C`           |
+| Exit shell                 | `exit`                   |
 
 ## Variables & Scripts
 
-**Set a variable**
-```bash
-MYVAR="value"
-```
-
-**Print variable**
-```bash
-echo "$MYVAR"
-```
-
-**Run a script**
-```bash
-bash script.sh
-```
-
-**Make a script executable**
-```bash
-chmod +x script.sh
-```
-
----
+| Action                     | Command                     |
+|----------------------------|-----------------------------|
+| Set a variable             | `MYVAR="value"`             |
+| Print a variable           | `echo "$MYVAR"`             |
+| Run a script               | `bash script.sh`            |
+| Make a script executable   | `chmod +x script.sh`        |
 
 ## Networking
 
-**Show IP address**
-```bash
-ip a
-```
-or
-```bash
-ifconfig
-```
-
-**Ping a host**
-```bash
-ping 8.8.8.8
-```
-
-**Download a file (wget)**
-```bash
-wget http://example.com/file.zip
-```
-
----
+| Action                 | Command                          |
+|------------------------|----------------------------------|
+| Show IP address        | `ip a` or `ifconfig`             |
+| Ping a host            | `ping 8.8.8.8`                   |
+| Download a file (wget) | `wget http://example.com/file.zip` |
 
 ## Process Management
 
-**Show running processes**
-```bash
-ps aux
-```
-
-**Find a process**
-```bash
-ps aux | grep processname
-```
-
-**Kill a process by PID**
-```bash
-kill 1234
-```
-
-**Kill all processes by name**
-```bash
-killall processname
-```
-
----
+| Action                   | Command                        |
+|--------------------------|--------------------------------|
+| Show running processes   | `ps aux`                       |
+| Find a process           | `ps aux \| grep processname`   |
+| Kill a process by PID    | `kill 1234`                    |
+| Kill all processes by name | `killall processname`        |
 
 ## Disk Usage
 
-**Show disk usage for all files/folders**
-```bash
-du -sh *
-```
-
-**Show free disk space**
-```bash
-df -h
-```
-
----
+| Action                            | Command                    |
+|-----------------------------------|----------------------------|
+| Show disk usage for files/folders | `du -sh *`                 |
+| Show free disk space              | `df -h`                    |
 
 ## Other Useful Commands
 
-**Show environment variables**
-```bash
-printenv
-```
-
-**Find files by name**
-```bash
-find . -name "filename.txt"
-```
-
-**Show current date/time**
-```bash
-date
-```
-
----
+| Action                         | Command                                       |
+|--------------------------------|-----------------------------------------------|
+| Show environment variables     | `printenv`                                    |
+| Find files by name             | `find . -name "filename.txt"`                 |
+| Show current date/time         | `date`                                        |
 
 ## Advanced Bash
 
 ### Command Chaining
 
-**Run commands in sequence**
-```bash
-command1 && command2  # Only runs command2 if command1 succeeds
-command1 || command2  # Runs command2 if command1 fails
-command1 ; command2   # Runs both commands regardless of success/failure
-```
+| Action                            | Command                               |
+|-----------------------------------|---------------------------------------|
+| Run commands if previous succeeds | `command1 && command2`                |
+| Run commands if previous fails    | `command1 || command2`                |
+| Run commands sequentially         | `command1 ; command2`                 |
 
 ### Redirection & Pipes
 
-**Redirect output to a file**
-```bash
-echo "Hello" > file.txt   # Overwrites
-echo "World" >> file.txt  # Appends
-```
-
-**Redirect stderr**
-```bash
-command 2> error.log
-```
-
-**Redirect stdout and stderr**
-```bash
-command > out.log 2>&1
-```
-
-**Pipe output to another command**
-```bash
-cat file.txt | grep "pattern"
-```
+| Action                            | Command                               |
+|-----------------------------------|---------------------------------------|
+| Redirect stdout to file           | `echo "Hello" > file.txt`            |
+| Append stdout to file             | `echo "World" >> file.txt`           |
+| Redirect stderr to file           | `command 2> error.log`               |
+| Redirect stdout & stderr to file  | `command > out.log 2>&1`             |
+| Pipe output to another command    | `cat file.txt \| grep "pattern"`     |
 
 ### Loops
 
-**For loop**
-```bash
-for i in {1..5}; do
-  echo "Number $i"
-done
-```
-
-**While loop**
-```bash
-while read line; do
-  echo "$line"
-done < file.txt
-```
+| Action               | Command                                              |
+|----------------------|------------------------------------------------------|
+| For loop             | `for i in {1..5}; do echo "Number $i"; done`         |
+| While loop           | `while read line; do echo "$line"; done < file.txt`  |
 
 ### Conditionals
 
-**If statement**
-```bash
-if [ -f file.txt ]; then
-  echo "file exists"
-else
-  echo "file not found"
-fi
-```
+| Action       | Command                                                                    |
+|--------------|----------------------------------------------------------------------------|
+| If statement | `if [ -f file.txt ]; then echo "file exists"; else echo "file not found"; fi` |
 
 ### Functions
 
-**Define and use a function**
-```bash
-greet() {
-  echo "Hello, $1!"
-}
-greet "Ewan"
-```
+| Action                     | Command                                                             |
+|----------------------------|---------------------------------------------------------------------|
+| Define and call a function | <pre>greet() {<br>  echo "Hello, $1!"<br>}<br>greet "Ewan"</pre>     |
 
 ### Find & Xargs
 
-**Delete all `.log` files**
-```bash
-find . -name "*.log" -type f -delete
-```
-
-**Find and run command**
-```bash
-find . -name "*.txt" | xargs cat
-```
+| Action                     | Command                                             |
+|----------------------------|-----------------------------------------------------|
+| Delete all `.log` files    | `find . -name "*.log" -type f -delete`              |
+| Find and run a command     | `find . -name "*.txt" \| xargs cat`                 |
 
 ### Sed & Awk
 
-**Replace text in a file (in-place)**
-```bash
-sed -i 's/oldtext/newtext/g' file.txt
-```
+| Action                                | Command                                  |
+|---------------------------------------|------------------------------------------|
+| Replace text in-place                 | `sed -i 's/oldtext/newtext/g' file.txt` |
+| Print the second column from a file   | `awk '{print $2}' file.txt`             |
 
-**Print the second column from a file**
-```bash
-awk '{print $2}' file.txt
-```
+### Tar & Gzip
 
-### Tar/Gzip
-
-**Create a tar.gz archive**
-```bash
-tar -czvf archive.tar.gz foldername/
-```
-
-**Extract a tar.gz archive**
-```bash
-tar -xzvf archive.tar.gz
-```
+| Action                        | Command                            |
+|-------------------------------|------------------------------------|
+| Create a tar.gz archive       | `tar -czvf archive.tar.gz folder/` |
+| Extract a tar.gz archive      | `tar -xzvf archive.tar.gz`         |
 
 ### SSH & Rsync
 
-**SSH into a server**
-```bash
-ssh user@host
-```
-
-**Copy files to a remote server**
-```bash
-scp file.txt user@host:/path/
-```
-
-**Sync directories**
-```bash
-rsync -avz source/ user@host:/dest/
-```
-
----
+| Action                       | Command                                       |
+|------------------------------|-----------------------------------------------|
+| SSH into a server            | `ssh user@host`                               |
+| Copy files to a remote host  | `scp file.txt user@host:/path/`               |
+| Sync directories             | `rsync -avz source/ user@host:/dest/`         |
 
 ## Script Template
 
-**Basic shell script**
-```bash
-#!/bin/bash
-echo "This is a shell script"
-```
-
----
+| Action            | Template                                      |
+|-------------------|-----------------------------------------------|
+| Basic shell script| <pre>#!/bin/bash<br>echo "This is a shell script"</pre> |
 
 ## Miscellaneous
 
-**Print the last command's exit code**
-```bash
-echo $?
-```
-
-**Get the number of files in a directory**
-```bash
-ls | wc -l
-```
-
-**Generate a random number**
-```bash
-echo $RANDOM
-```
-
-**Sleep for 5 seconds**
-```bash
-sleep 5
-```
-
----
+| Action                               | Command             |
+|--------------------------------------|---------------------|
+| Print last command's exit code       | `echo $?`           |
+| Get number of files in a directory   | `ls \| wc -l`       |
+| Generate a random number             | `echo $RANDOM`      |
+| Sleep for 5 seconds                  | `sleep 5`           |
 
 **Tip:** Use `man <command>` to view the manual for any command!
